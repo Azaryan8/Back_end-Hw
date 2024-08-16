@@ -5,9 +5,10 @@ import book.repository.BookRepository;
 import book.repository.BookRepositoryimp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-@Component
+@Service
 public class BookServiceImp implements BookService{
     private final BookRepository repository;
     @Autowired

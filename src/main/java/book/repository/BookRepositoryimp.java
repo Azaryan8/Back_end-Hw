@@ -2,9 +2,10 @@ package book.repository;
 
 import book.entitiy.Book;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
-@Component
+@Repository
 public class BookRepositoryimp implements BookRepository {
 
     List<Book> db = List.of(
