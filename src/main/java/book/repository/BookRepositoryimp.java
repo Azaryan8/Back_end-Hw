@@ -5,6 +5,8 @@ import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.stream.Collectors;
+
 @Repository
 public class BookRepositoryimp implements BookRepository {
 
@@ -28,6 +30,10 @@ public class BookRepositoryimp implements BookRepository {
 
     @Override
     public Book delete(Book book) {
+        db.stream()
+                .filter(b-> book.getId().equals(book.getId()))
+                .collect(Collectors.toList());
+
         return null;
     }
 }
